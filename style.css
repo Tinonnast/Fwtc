@@ -1,0 +1,374 @@
+body {
+    background-color: red;
+    margin: 0;
+}
+
+#top-container {
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 20vh;
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sidebar-buttons {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+#logo:hover {
+    border-radius: 50px;
+}
+
+
+#sidebar {
+    outline: solid rgba(255, 255, 255, 0.07) 1px;
+    z-index: 2;
+    flex-direction: row;
+    display: flex;
+    position: fixed;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 25px;
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    backdrop-filter: blur(1.5rem) brightness(120%);
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
+#logo {
+    position: relative;
+    width: 80px;
+    border-radius: 12px;
+    transition-duration: .4s;
+}
+
+.separator {
+    position: relative;
+    background-color: #808080;
+    width: 1px;
+    height: 60px;
+}
+
+.sidebar-buttons svg {
+    width: 50px;
+    height: 50px;
+}
+
+#selector-download {
+    height: 2px;
+    width: 0px;
+    position: relative;
+    background-color: white;
+    transition-duration: .5s;
+}
+
+.sidebar-buttons:hover #selector-download {
+    animation: sidebar-buttons-hover .5s forwards;
+}
+
+#selector-community {
+    height: 2px;
+    width: 0px;
+    position: relative;
+    background-color: white;
+    transition-duration: .5s;
+}
+
+.sidebar-buttons:hover #selector-community {
+    animation: sidebar-buttons-hover .5s forwards;
+}
+
+#selector-support {
+    height: 2px;
+    width: 0px;
+    position: relative;
+    background-color: white;
+    transition-duration: .5s;
+}
+
+.sidebar-buttons:hover #selector-support {
+    animation: sidebar-buttons-hover .5s forwards;
+}
+
+#selector-about {
+    height: 2px;
+    width: 0px;
+    position: relative;
+    background-color: white;
+    transition-duration: .5s;
+}
+
+.sidebar-buttons:hover #selector-about {
+    animation: sidebar-buttons-hover .5s forwards;
+}
+
+#selector-account {
+    height: 2px;
+    width: 0px;
+    position: relative;
+    background-color: white;
+    transition-duration: .5s;
+}
+
+.sidebar-buttons:hover #selector-account {
+    animation: sidebar-buttons-hover .5s forwards;
+}
+
+@keyframes sidebar-buttons-hover {
+    0% {width: 0px;}
+    100% {width: 50px;}
+}
+
+#title {
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 50px;
+    position: relative;
+    grid-row: 2;
+    grid-column: 2 / 5;
+    align-self: end;
+}
+
+#middle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #0b1b0b;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+#page-1 {
+    display: grid;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: 95%;
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(5, 19vh)
+}
+
+#page-2 {
+    backdrop-filter: blur(1.5rem) brightness(120%);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20vw);
+    grid-template-rows: repeat(6, 20vh);
+    margin: 0;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#page-2 h1 {
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 40px;
+    top: 40px;
+    grid-column: 2/5;
+    align-self: end;
+}
+
+#under-title {
+    font-family: "Inter";
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    font-size: 25px;
+    grid-column: 2/5;
+    grid-row: 3;
+    position: relative;
+}
+
+
+.button-style-1 {
+    width: 200px;
+    height: 56px;
+    overflow: hidden;
+    border: none;
+    color: #fff;
+    background: none;
+    position: relative;
+    padding-bottom: 2em;
+    cursor: pointer;
+}
+
+#download {
+    grid-row: 3;
+    grid-column: 2;
+    align-self: end;
+    font-size: 30px;
+}
+
+#preview {
+    grid-row: 3;
+    grid-column: 3;
+    align-self: end;
+    font-size: 30px;
+    left: -150px;
+}
+
+.button-style-1 > div,
+.button-style-1 > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.button-style-1:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    background: currentColor;
+    transition: transform 0.25s ease-out;
+}
+
+.button-style-1:hover:before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.button-style-1 .clone > *,
+.button-style-1 .text > * {
+    opacity: 1;
+    font-size: 1.3rem;
+    transition: 0.2s;
+    margin-left: 4px;
+}
+
+.button-style-1 .clone > * {
+    transform: translateY(60px);
+}
+
+.button-style-1:hover .clone > * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.button-style-1:hover .text > * {
+    opacity: 1;
+    transform: translateY(-60px);
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.button-style-1:hover .clone > :nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.button-style-1:hover .clone > :nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.button-style-1:hover .clone > :nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.button-style-1:hover .clone > :nth-child(4) {
+    transition-delay: 0.3s;
+}
+/* icon style and hover */
+.button-style-1 svg {
+    width: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-50deg);
+    transition: 0.2s ease-out;
+}
+
+.button-style-1:hover svg {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.button-style-1 span {
+    top: 15px;
+    position: relative;
+}
+
+#footer {
+    display: grid;
+    background-color: #222222;
+    grid-template: repeat(8, 5vh)/repeat(20, 5vw);
+    width: 99vw;
+    height: 45vh;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#pages {
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 2/7;
+    flex-direction: column;
+    font-family: Inter;
+    width: 200px;
+    font-size: 18px;
+}
+
+#footer p {
+    color: #aaaaaa;
+    font-weight: 800;
+}
+
+#footer a {
+    color: #868686;
+    transition-duration: .2s;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #aaaaaa;
+}
+
+#legal-boilerplate {
+    color: #aaaaaa;
+    font-weight: 400 !important;
+    font-family: Inter;
+    grid-column: 2/10;
+    grid-row: 7;
+}
+
+#socials {
+    display: flex;
+    grid-column: 5/7;
+    grid-row: 2/7;
+    flex-direction: column;
+    font-family: Inter;
+    font-size: 18px;
+}
+
+#page-2 img {
+    grid-column: 2/4;
+    grid-row: 3/5;
+    width: 60vw;
+    height: 40vw;
+}
