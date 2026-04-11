@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Fish wants to choose :(-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AGENT SELECT | Fwtc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="circle-1"></div>
+
+    <div id="left-container">
+        <ul id="sidebar">
+            <button onclick="removeRoleFilters()" class="roles-buttons"><img alt="Logo" id="logo" src="Icon.png"></button>
+            <div class="separator"></div>
+            <button onclick="filterRoles('Duelist')" class="roles-buttons"><img id="Duelist" alt="Duelist" class="roles" src="Duelist.png"></button>
+            <button onclick="filterRoles('Initiator')" class="roles-buttons"><img id="Initiator" alt="Initiator" class="roles" src="Initiator.png"></button>
+            <button onclick="filterRoles('Controller')" class="roles-buttons"><img id="Controller" alt="Controller" class="roles" src="Controller.png"></button>
+            <button onclick="filterRoles('Sentinel')" class="roles-buttons"><img id="Sentinel" alt="Sentinel" class="roles" src="Sentinel.png"></button>
+            <div class="separator"></div>
+            <img alt="Random" class="roles" src="dice.png">
+        </ul>
+    </div>
+    <div id="middle-container">
+
+        <ul id="chips">
+            <div id="map-notch">
+                <img alt="Map" id="notch-map-image" src="map.png">
+
+            </div>
+        </ul>
+            <ul id="chosen">
+                <ul id="chosen-icons">
+                    <img alt="Duelist" class="chosen-roles" src="Duelist.png">
+                    <img alt="Initiator" class="chosen-roles" src="Initiator.png">
+                    <img alt="Controller" class="chosen-roles" src="Controller.png">
+                    <img alt="Sentinel" class="chosen-roles" src="Sentinel.png">
+                </ul>
+                <ul id="chosen-text">
+                    <p class="chosen-text" id="duelist-amount">0</p>
+                    <p class="chosen-text" id="initiator-amount">0</p>
+                    <p class="chosen-text" id="controller-amount">0</p>
+                    <p class="chosen-text" id="sentinel-amount">0</p>
+                </ul>
+            </ul>
+
+
+
+        <div id="middle-agents">
+            <div id="timer">
+                <p id="timer-text"></p>
+            </div>
+            <img id="agent-background">
+            <img id="agent-text-background">
+
+            <ul id="agent-cards">
+                <div class="players" id="div-player-1">
+
+                    <div class="hover-helper">
+                        <img alt="Player1" class="players-img" id="player-1">
+                        <div class="blue-line-overlay" id="player-1-hover"></div>
+                    </div>
+                    <p class="player-name" id="name-player-1"></p>
+                    <p class="player-agent" id="agent-player-1"></p>
+                </div>
+                <div class="players" id="div-player-2">
+                    <div class="hover-helper">
+                        <img alt="Player2" class="players-img" id="player-2">
+                        <div class="blue-line-overlay" id="player-2-hover"></div>
+                    </div>
+                    <p class="player-name" id="name-player-2"></p>
+                    <p class="player-agent" id="agent-player-2"></p>
+                </div>
+
+                <div class="players" id="you-div">
+                    <div id="lock"></div>
+                    <div id="lock-in" onclick="lockAgent()"><p id="lock-in-text">LOCK IN</p></div>
+                    <div class="hover-helper">
+                        <img alt="YOU" class="players-img" id="you">
+                        <div id="lock-animation"></div>
+                        <div class="blue-line-overlay" id="you-hover"></div>
+                    </div>
+                    <p class="player-name" id="name-you"></p>
+                </div>
+                <div class="players" id="div-player-4">
+                    <div class="hover-helper">
+                        <img alt="Player4" class="players-img" id="player-4">
+                        <div class="blue-line-overlay" id="player-4-hover"></div>
+                    </div>
+                    <p class="player-name" id="name-player-4"></p>
+                    <p class="player-agent" id="agent-player-4"></p>
+                </div>
+                <div class="players" id="div-player-5y">
+                    <div class="hover-helper">
+                        <img alt="Player5" class="players-img" id="player-5">
+                        <div class="blue-line-overlay" id="player-5-hover"></div>
+                    </div>
+                    <p class="player-name" id="name-player-5"></p>
+                    <p class="player-agent" id="agent-player-5"></p>
+                </div>
+            </ul>
+
+            <ul id="agents">
+            </ul>
+
+
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
