@@ -363,7 +363,7 @@ let youImg = document.getElementById("you")
 let youName = document.getElementById("name-you")
 const youHover = document.getElementById("you-hover");
 
-let dataYouName = "Chips"
+let dataYouName = "Me"
 let dataYouAgent = "Picking"
 let dataYouLockState = ""
 
