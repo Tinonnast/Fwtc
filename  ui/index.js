@@ -1,4 +1,4 @@
-/* lovely 100% AI stuff*/
+/* lovely 100% AI code*/
 const lockBtn = document.getElementById('lock-in');
 const animDiv = document.getElementById('lock-animation');
 
@@ -18,7 +18,7 @@ animDiv.addEventListener('animationend', () => {
     animDiv.classList.remove('play-lock-anim');
 });
 const delay = ms => new Promise(res => setTimeout(res, ms));
-/* end of the lovely 100% AI stuff */
+/* end of the lovely 100% AI code */
 
 function incognitoName(playerName, playerAgent) {
     if (playerName === "@@@") {
