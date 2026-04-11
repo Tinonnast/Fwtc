@@ -298,13 +298,13 @@ async function addOneAgent(agentName) {
 
     agentImg.innerHTML = `<img src='/Img/${agentName}.png' class='agent-images' id='${agentName}' alt='${agentName}'>`
 
-    if (agent in lockedAgents) {
+    if (agentName in lockedAgents) {
         agentImg.onclick = function () {
             doNothing()
         }
     } else {
         agentImg.onclick = function () {
-            selectAgent(agent)
+            selectAgent(agentName)
         }
     }
 
