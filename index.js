@@ -296,7 +296,7 @@ async function addOneAgent(agentName) {
     agentImg.style.outlineWidth = "2px"
     agentImg.style.outlineColor =  "#ffffff" //agentOutlineColor(agent)
 
-    agentImg.innerHTML = `<img src='${agentName}.png' class='agent-images' id='${agentName}' alt='${agentName}'>`
+    agentImg.innerHTML = `<img src='/Img/${agentName}.png' class='agent-images' id='${agentName}' alt='${agentName}'>`
 
     if (agent in lockedAgents) {
         agentImg.onclick = function () {
