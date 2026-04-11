@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body {
+    background-color: #0e111b;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+#title {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 20px;
+    font-size: 50px;
+    top: 2.5%;
+    margin: 0;
+    color: white;
+}
+
+#middle-container {
+    background-color: #151a28;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    outline: solid 1px rgba(255, 255, 255, 0.22);
+    z-index: 0;
+    justify-content: center;
+}
+
+#left-container {
+    z-index: 1;
+    position: fixed;
+    width: 147px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#sidebar {
+    outline: solid rgba(255, 255, 255, 0.07) 1px;
+    z-index: 2;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 40px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    backdrop-filter: blur(1.5rem) brightness(120%);
+}
+
+
+#logo {
+    position: relative;
+    width: 100px;
+    border-radius: 12px;
+    transition-duration: .4s;
+}
+
+.separator {
+    position: relative;
+    background-color: #808080;
+    width: 60px;
+    height: 1px;
+}
+
+.roles {
+    width: 50px;
+    background-color: #363f58;
+    padding: 10px 10px 10px 10px;
+    border-radius: 12px;
+    transition-duration: .4s;
+}
+
+#logo:hover {
+    border-radius: 50px;
+}
+
+.roles:hover {
+    border-radius: 50px;
+
+}
+
+#gamedata-cards {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 87%;
+    gap: 20px;
+}
+
+#map {
+    position: relative;
+    outline: solid 1px rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(1.5rem) brightness(120%);
+    border-radius: 20px;
+    height: 80px;
+    width: 183.22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#map-img {
+    position: relative;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#Map-text {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    top: -3px;
+    position: relative;
+}
+
+#chosen-icons {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    position: relative;
+    top: 10px;
+}
+
+.chosen-roles {
+    width: 20px;
+}
+
+#chosen-text {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    position: relative;
+    top: -10px;
+}
+
+.chosen-text {
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0;
+}
+
+#middle-agents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    gap: 150px;
+    top: 9%;
+    overflow: hidden;
+    z-index: 5;
+}
+
+#agent-cards {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    top: 25%;
+    position: fixed;
+    width: 150px;
+}
+
+#agents {
+    z-index: 5;
+    top: 52%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+    outline: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(1.5rem) brightness(120%);
+}
+
+
+.agent-selector-animation {
+    animation: move-agent-selector .2s forwards;
+}
+
+@keyframes move-agent-selector {
+    0% { transform: translateY(0%) }
+    100% { transform: translateY(106%) }
+}
+
+.agent-cards-down-animation {
+    animation: agent-cards-down .8s forwards;
+
+}
+
+@keyframes agent-cards-down {
+    0% { transform: translateY(0%) }
+    100% { transform: translateY(140%) }
+}
+
+.agent-images {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    transition-duration: .1s;
+    position: relative;
+    z-index: 3;
+}
+
+
+
+.agent-outlines {
+    top: 10px;
+    height: 70px;
+    width: 70px;
+    margin: 2px 2px 2px 2px;
+    border-radius: 15px;
+    outline-offset: 3px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.agent-images:hover {
+    transform: scale(1.20);
+}
+
+.agent-images:hover .agent-outlines {
+    outline-color: #24ffc7;
+}
+
+.agent-images:active {
+    transform: translate(0%, 1%);
+    transition-duration: 0.05s;
+}
+
+
+.players {
+    position: relative;
+    border-radius: 20px;
+    min-width: 150px;
+    height: 250px;
+    backdrop-filter: blur(10px) brightness(120%);
+    outline: solid 1px rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+
+.players-img {
+    position: relative;
+    width: 150px;
+    border-radius: 20px;
+    outline-offset: 2px;
+}
+
+.player-name {
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    top: -10px;
+}
+
+.player-agent {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    position: relative;
+    font-size: 20px;
+    top: -25px;
+}
+
+#name-you {
+    position: relative;
+    top: 0;
+    color: #d8b86d;
+}
+
+#tags {
+    background-color: rgba(0, 0, 0, 0.47);
+    width: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    height: 35px;
+    position: relative;
+    flex-shrink: 0;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    text-wrap: nowrap;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+#agent-background {
+    z-index: 1;
+    position: fixed;
+    height: 120%;
+    top: 0;
+    filter: drop-shadow(0px 4px 2px rgba(0,0,0,0.5)) brightness(70%);
+    transition-duration: .5s;
+}
+
+#agent-text-background {
+    z-index: 0;
+    position: fixed;
+    height: 120%;
+    top: 0;
+    filter: drop-shadow(0px 4px 2px rgba(0,0,0,0.5)) brightness(70%);
+    transition-duration: .5s;
+}
+
+#you-div {
+    position: relative;
+    height: 250px;
+    top: 0;
+    transition-duration: .2s;
+    backdrop-filter: blur(1.5rem) brightness(120%);
+
+}
+
+.card-blur-backgrounds {
+    position: absolute;
+}
+
+#agent-cards-blur {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    top: 15%;
+    position: fixed;
+    outline: solid 1px white;
+}
+
+#lock-in {
+    width: 150px;
+    z-index: 5;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+    transition-duration: .3s;
+    position: absolute;
+    height: 40px;
+    top: 210px;
+}
+
+#name-you {
+    transition-duration: .2s;
+}
+
+#lock-in:hover {
+    top: 134px;
+    height: 133px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+
+#lock-in:hover #lock-in-text {
+    font-size: 30px;
+    transform: translate(0%, 10%);
+}
+
+#lock-animation {
+    position: absolute;
+    top: -3px;
+    height: 3px;
+    width: 150px;
+    background-color: white;
+    transition-duration: .2s;
+    z-index: 4;
+}
+
+@keyframes slide-down {
+    0% {
+        top: -2px;
+        opacity: 1;
+    }
+    90% {
+        height: 2px;
+    }
+    95% {
+        top: 149px;
+        opacity: 1;
+        height: 1px;
+    }
+    100% {
+        top: 150px;
+        opacity: 0;
+
+    }
+}
+
+.play-lock-anim {
+    animation: slide-down 0.4s forwards;
+}
+
+#lock-in:active ~ .hover-helper #lock-animation {
+    top: 150px;
+}
+
+.select-agent-animation {
+    animation: agent-animation 0.3s ease-out;
+}
+
+@keyframes agent-animation {
+    0% { left: -10px; }
+    20% { left: -2px; }
+    100% {left: 0; }
+}
+
+
+
+
+#lock-in-text {
+    z-index: 3;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    transition-duration: .2s;
+    top: -8px;
+}
+
+#lock {
+    position: absolute;
+    z-index: 1;
+    height: 20px;
+    width: 150px;
+}
+
+
+
+.hover-helper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* animation from ai */
+.blue-line-overlay {
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    background: repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 2px,
+            rgba(0, 100, 255, 0.2) 0px,
+            rgba(0, 100, 255, 0.2) 0px
+    );
+    background-color: rgba(0, 100, 255, 0.3);
+    background-size: 100% 8px;
+    animation: moveLines 10s linear infinite;
+}
+
+@keyframes moveLines {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+
+#circle-1 {
+    outline: solid 1px rgba(255, 255, 255, 0.05);
+    border-radius: 500px;
+    top: 15%;
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    pointer-events: none;
+}
+
+#top-info {
+    display: flex;
+    position: fixed;
+
+}
+
+#map-notch {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    backdrop-filter: blur(1rem) brightness(120%);
+    width: 600px;
+    height: 125px;
+    top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 6;
+    left: 0;
+}
+
+#notch-map-image {
+    width: 600px;
+    height: 125px;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#notch-map-text {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    top: -30px;
+}
+
+#timer {
+    position: relative;
+    width: 150px;
+    height: 60px;
+    backdrop-filter: blur(1.5rem) brightness(120%);
+    top: -2%;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    animation: timerLow 0.5 ease-in;
+}
+
+@keyframes timerLow {
+    0% { transform: scale(1%) }
+    100% { transform: scale(1.5%) }
+}
+
+#timer-text {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 30px;
+    position: relative;
+}
+
+.roles-buttons {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#chips { /* Thats my name!*/
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    position: relative;
+    margin: 0;
+    z-index: 6;
+    height: 170px;
+}
+
+.side-chips {
+    backdrop-filter: blur(1.5rem) brightness(110%);
+    top: 45px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 87px;
+    width: 183px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#playside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 400px;
+    height: 20px;
+    position: relative;
+    z-index: 7;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    top: -100px;
+    filter: blur(1.5rem);
+}
+
+#chosen {
+    left: 1700px;
+    top: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 87px;
+    width: 183px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    backdrop-filter: blur(1.5rem) brightness(120%);
+    padding-left: 0;
+    position: absolute;
+    z-index: 5;
+}
