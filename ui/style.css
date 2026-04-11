@@ -31,8 +31,8 @@ body {
     background-color: #151a28;
     display: flex;
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 101vh;
+    width: 100vw;
     left: 0;
     top: 0;
     outline: solid 1px rgba(255, 255, 255, 0.22);
